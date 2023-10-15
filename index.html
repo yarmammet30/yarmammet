@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-	    <script src="https://editor.codecogs.com/eqneditor.api.min.js" crossorigin="anonymous"></script>
-
+	    <script src="https://editor.codecogs.com/eqneditor.api.min.js"></script>
+  <link rel="stylesheet" href="https://editor.codecogs.com/eqneditor.css"/>
+  <script>
+    window.onload = function () {
+      textarea = EqEditor.TextArea.link('latexInput')
+        .addOutput(new EqEditor.Output('output'))
+        .addHistoryMenu(new EqEditor.History('history'));
+    
+      EqEditor.Toolbar.link('toolbar').addTextArea(textarea);
+    }
+  </script>
         <title>My page</title>
         <style>
             body {
@@ -26,17 +35,14 @@
         </nav>
     </header>
     triple-section
+<div id="equation-editor">
+    <div id="history"></div>
     <div id="toolbar"></div>
-	<div id="latexInput"></div>
-	<img id="output"/>
-
-<script type="text/javascript">
-textarea = new EqEditor.TextArea('latexInput')
-.addToolbar(new EqEditor.Toolbar('toolbar'), true);
-.addOutput(new EqEditor.Output('output'));
-</script>
-
-
+    <div id="latexInput" placeholder="\left ( \frac{1}{2} \right )"></div>
+    <div id="equation-output">
+      <img id="output">
+    </div>
+  </div>
     <section>lower</section>
     <footer>footer</footer>
     <h1 style="color:rgb(0, 4, 255);">ymathcreative</h1>
