@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+	    <script src="https://editor.codecogs.com/eqneditor.api.min.js" crossorigin="anonymous"></script>
+
         <title>My page</title>
         <style>
             body {
@@ -23,11 +25,18 @@
 
         </nav>
     </header>
-    <section>triple-section
-    <math>
-	     \frac{a}{b} + \frac{a}{b} + \frac{a}{b} 
-    </math>
-    </section>
+    triple-section
+    <div id="toolbar"></div>
+	<div id="latexInput"></div>
+	<img id="output"/>
+
+<script type="text/javascript">
+textarea = new EqEditor.TextArea('latexInput')
+.addToolbar(new EqEditor.Toolbar('toolbar'), true);
+.addOutput(new EqEditor.Output('output'));
+</script>
+
+
     <section>lower</section>
     <footer>footer</footer>
     <h1 style="color:rgb(0, 4, 255);">ymathcreative</h1>
